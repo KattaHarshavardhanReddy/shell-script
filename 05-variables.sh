@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echa "please enter your name::"
+echa "please enter your username::"
 
 read USERNAME
