@@ -4,7 +4,7 @@ echo "enter the number::"
 
 read NUMBER
 
-if [ $NUMBER -gt 100 ]
+if [ "$NUMBER" -gt 100 ]
 then
     echo "num is grtr"
 else
