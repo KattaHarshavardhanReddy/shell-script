@@ -2,6 +2,6 @@
 
 echo "please enter your username::" #text 
 
-read USERNAME
+read -s USERNAME
 
 echo "username entered : $USERNAME"
