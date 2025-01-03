@@ -5,6 +5,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+H="\e[34m"
 
 VALIDATE(){
 if [ $1 -ne 0 ]
@@ -46,5 +47,5 @@ then
 
       VALIDATE $? "installed git"
 else
-    echo -e " $Y git already install"
+    echo -e " $H git already install"
 fi
