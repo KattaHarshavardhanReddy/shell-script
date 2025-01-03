@@ -9,7 +9,7 @@ then
 fi
 dnf install gitv -y
 
-if [ $? -ne0 ]
+if [ $? -ne 0 ]
 then
     echo "installation failure"
     exit 1
