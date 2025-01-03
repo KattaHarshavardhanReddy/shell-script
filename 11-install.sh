@@ -7,4 +7,4 @@ then
     echo "u sud have sudo access"
 fi
 
-dnf install myql -y
+dnf install mysql -y
