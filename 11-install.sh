@@ -15,5 +15,6 @@ then
     exit 1
 else
     echo "installation success"
-    
+fi
+
 dnf install mysql -y
