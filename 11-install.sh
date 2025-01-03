@@ -7,22 +7,39 @@ then
     echo "Error:: u sud have sudo access"
     exit 1 #other than 0
 fi
-dnf install git -y
+
+dnf list installed git
 
 if [ $? -ne 0 ]
-then
-    echo "installation failure"
-    exit 1
-else
-    echo "installation success"
-fi
 
-dnf install mysql -y
+then 
+
+    dnf install git -y
+
+        if [ $? -ne 0 ]
+        then
+           echo "installation failure"
+           exit 1
+        else
+          echo "installation success"
+        fi
+else
+    echo "Git  already installed"
+
+dnf list installed git
 
 if [ $? -ne 0 ]
-then
-    echo "installation failure"
-    exit 1
+
+then 
+
+    dnf install mysql -y
+
+        if [ $? -ne 0 ]
+        then
+            echo "installation failure"
+            exit 1
+        else
+             echo "installation success"
+        fi
 else
-    echo "installation success"
-fi
+    echo " mysql already install"
