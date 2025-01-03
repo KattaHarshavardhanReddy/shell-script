@@ -9,4 +9,11 @@ then
 fi
 dnf install gitv -y
 
+if [ $? -ne0 ]
+then
+    echo "installation failure"
+    exit 1
+else
+    echo "installation success"
+    
 dnf install mysql -y
