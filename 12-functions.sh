@@ -19,7 +19,7 @@ then
     exit 1 #other than 0
 fi
 
-dnf list installed mysql
+dnf list installed mysqlj
 
 if [ $? -ne 0 ]
 
