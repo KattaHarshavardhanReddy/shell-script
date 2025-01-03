@@ -25,6 +25,7 @@ then
         fi
 else
     echo "Git  already installed"
+fi
 
 dnf list installed git
 
@@ -43,3 +44,4 @@ then
         fi
 else
     echo " mysql already install"
+fi
