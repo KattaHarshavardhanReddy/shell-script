@@ -16,8 +16,8 @@ dnf install mysqll -y
 
 if [ $? -ne 0 ]
 then
-    echo "installation $R fail"
+    echo -e "installation $R fail"
     exit 1
 else
-    echo "installation $G success"
+    echo -e "installation $G success"
 fi
