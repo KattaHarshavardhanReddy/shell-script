@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 
 Logs_folder="/var/log/shellscript-logs"
-Logs_file=$(echo $0 | cat -d "." -f1)
+Logs_file=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$Logs_folder/$Logs_file-$TIMESTAMP.log"
 
