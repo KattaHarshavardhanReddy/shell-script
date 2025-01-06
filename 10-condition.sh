@@ -26,6 +26,8 @@ then
 else
     echo -e " $G mysql already installed"
 
+fi
+
 
 dnf list installed git
 if [ $? -ne 0 ]
@@ -40,3 +42,4 @@ then
         fi
 else
     echo -e " $G git already installed"
+fi
