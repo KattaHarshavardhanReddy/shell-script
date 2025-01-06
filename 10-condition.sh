@@ -10,7 +10,7 @@ N="\e[0m"
 Logs_folder="/var/log/shellscript-logs"
 Logs_file=$(echo $0 | cat -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE_NAME="$Logs_Folder/$Logs_File-$TIMESTAMP.log"
+LOG_FILE_NAME="$Logs_folder/$Logs_file-$TIMESTAMP.log"
 
 VALIDATE(){
        if [ $1 -ne 0 ]
