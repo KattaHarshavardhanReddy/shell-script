@@ -7,6 +7,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+Logs_folder="/var/log/shellscript-logs"
+
 VALIDATE(){
        if [ $1 -ne 0 ]
         then
