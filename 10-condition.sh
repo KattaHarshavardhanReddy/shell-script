@@ -8,6 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 
 Logs_folder="/var/log/shellscript-logs"
+Logs_filename=$(echo $0)
 
 VALIDATE(){
        if [ $1 -ne 0 ]
