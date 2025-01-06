@@ -12,7 +12,17 @@ then
     exit 1
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
+
+if [ $? -ne 0 ]
+then
+    echo -e "installation $R fail"
+    exit 1
+else
+    echo -e "installation $G success"
+fi
+
+dnf install git -y
 
 if [ $? -ne 0 ]
 then
