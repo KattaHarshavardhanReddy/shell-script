@@ -5,6 +5,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
@@ -24,7 +25,7 @@ then
             echo -e "installation $G success"
         fi
 else
-    echo -e " $G mysql already installed"
+    echo -e " $G mysql already installed $N"
 
 fi
 
@@ -41,5 +42,5 @@ then
             echo -e "installation $G success"
         fi
 else
-    echo -e " $G git already installed"
+    echo -e " $G git already installed $N"
 fi
