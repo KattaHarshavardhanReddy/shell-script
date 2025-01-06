@@ -8,7 +8,9 @@ Y="\e[33m"
 N="\e[0m"
 
 Logs_folder="/var/log/shellscript-logs"
-Logs_filename=$(echo $0)
+Logs_file=$(echo $0 | cat -d "." -f1)
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+LOG_FILE_NAME="$Logs_Folder/$Logs_File-$TIMESTAMP.log"
 
 VALIDATE(){
        if [ $1 -ne 0 ]
@@ -20,16 +22,18 @@ VALIDATE(){
         fi
 }
 
+echo "script is executed at $TIMESTAMP" &>>$Logs_file
+
 if [ $USERID -ne 0 ]
 then
     echo -e "$R U need sudo access"
     exit 1
 fi
 
-dnf list installed mysql
+dnf list installed mysql &>>$Logs_file
 if [ $? -ne 0 ]
 then
-    dnf install mysql -y
+    dnf install mysql -y &>>$Logs_file
         
         VALIDATE $? "mysql installed"
 else
@@ -38,10 +42,10 @@ else
 fi
 
 
-dnf list installed git
+dnf list installed git &>>$Logs_file
 if [ $? -ne 0 ]
 then
-    dnf install git -y
+    dnf install git -y &>>$Logs_file
         
         VALIDATE $? "git installed" 
           
