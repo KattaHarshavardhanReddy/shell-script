@@ -12,22 +12,31 @@ then
     exit 1
 fi
 
-dnf install mysql -y
-
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
-    echo -e "installation $R fail"
-    exit 1
+    dnf install mysql -y
+        if [ $? -ne 0 ]
+        then
+            echo -e "installation $R fail"
+            exit 1
+        else
+            echo -e "installation $G success"
+        fi
 else
-    echo -e "installation $G success"
-fi
+    echo -e " $G mysql already installed"
 
-dnf install git -y
 
+dnf list installed git
 if [ $? -ne 0 ]
 then
-    echo -e "installation $R fail"
-    exit 1
+    dnf install git -y
+        if [ $? -ne 0 ]
+        then
+            echo -e "installation $R fail"
+            exit 1
+        else
+            echo -e "installation $G success"
+        fi
 else
-    echo -e "installation $G success"
-fi
+    echo -e " $G git already installed"
