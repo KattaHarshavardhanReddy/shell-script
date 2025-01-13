@@ -56,5 +56,5 @@ if [ -n "$FILES" ]
 then
     echo "Files are: $FILES"
 else
-    echo "No files to zip"
+    echo "No files older than $DAYS"
 fi
