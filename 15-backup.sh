@@ -60,8 +60,16 @@ then
     if [ -f "$ZIP_FILE" ]
     then
         echo -e "Successfully zipped the files older than $DAYS"
+        while read -r filepath #here filepath is the variable name, we can give any name
+        do
+            echo "Deleting files: $filepath" &>>$LOG_FILE_NAME
+            rm -rf $filepath
+            echo "Deleted files: $filepath"
+        done <<< $FILES
+
     else
         echo -e "$R Error:: $N Fail to zip the files"
+        exit 1
     fi
 else
     echo "No files older than $DAYS"
