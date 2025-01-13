@@ -9,7 +9,7 @@ SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14} #if user is not providing no. of days, we are tacking 14 as default
 
-Logs_folder="/var/log/shellscript-logs"
+Logs_folder="/home/ec2-user/shellscript-logs"
 Logs_file=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$Logs_folder/$Logs_file-$TIMESTAMP.log"
