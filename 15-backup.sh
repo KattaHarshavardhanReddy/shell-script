@@ -25,7 +25,7 @@ VALIDATE(){
 }
 
 USAGE(){
-    echo -e "$R USAGE:: sh 15-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>"
+    echo -e "$R USAGE::$N $R sh 15-backup.sh <SOURCE_DIR>$N  $R <DEST_DIR> $N $R <DAYS> $N"
     exit 1
 }
 
