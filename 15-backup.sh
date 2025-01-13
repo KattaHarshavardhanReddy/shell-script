@@ -28,6 +28,8 @@ USAGE(){
     echo -e "$R USAGE:: $N sh 15-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>"
 }
 
+mkdir -p /home/ec2-user/shellscript-logs/
+
 if [ $# -lt 2 ]
 then
     USAGE
