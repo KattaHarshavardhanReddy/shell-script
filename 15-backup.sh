@@ -25,7 +25,7 @@ VALIDATE(){
 }
 
 USAGE(){
-    echo -e "$R USAGE::$N $R sh 15-backup.sh <SOURCE_DIR>$N  $R <DEST_DIR> $N $R <DAYS> $N"
+    echo -e "$R USAGE::$N sh 15-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>"
     exit 1
 }
 
@@ -35,5 +35,18 @@ if [ $# -lt 2 ]
 then
     USAGE
 fi
+
+if [ ! -d $SOURCE_DIR ]
+then
+    echo -e "$SOURCE_DIR is not found"
+    exit 1
+fi
+
+if [ ! -d $DEST_DIR ]
+then
+    echo -e "$DEST_DIR is not found"
+    exit 1
+fi
+
 
 echo "script is executed at $TIMESTAMP" &>>$LOG_FILE_NAME
