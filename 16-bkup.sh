@@ -39,13 +39,13 @@ fi
 
 if [ ! -d "S_D" ]
 then
-    echo -e "$R S_D is not available"
+    echo -e "$S_D is not available"
     exit 1
 fi
 
 if [ ! -d "D_D" ]
 then
-    echo -e "$R D_D is not available"
+    echo -e "$D_D is not available"
     exit 1
 fi
 
