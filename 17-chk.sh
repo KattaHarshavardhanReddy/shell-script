@@ -47,3 +47,5 @@ then
     echo -e "$D_D is not available"
     exit 1
 fi
+
+echo "script is executed at $TIMESTAMP" &>>$LOG_FILE_NAME
