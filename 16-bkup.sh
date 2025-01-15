@@ -14,7 +14,6 @@ Logs_file=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$Logs_folder/$Logs_file-$TIMESTAMP.log"
 
-mkdir -p /home/ec2-user/ss-logs
 
 VALIDATE(){
        if [ $1 -ne 0 ]
@@ -28,25 +27,27 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE :: sh 16-bkup.sh <S_D> <D_D> <DAYS>"
-    exit 1
+
 }
+
+mkdir -p /home/ec2-user/ss-logs
 
 if [ $# -lt 2 ]
 then
     USAGE
 fi
 
-if [ ! -d S_D ]
-then
-    echo -e "$R S_D is not available"
-    exit 1
-fi
+#if [ ! -d S_D ]
+#then
+    #echo -e "$R S_D is not available"
+   # exit 1
+#fi
 
-if [ ! -d D_D ]
-then
-    echo -e "$R D_D is not available"
-    exit 1
-fi
+#if [ ! -d D_D ]
+#then
+   # echo -e "$R D_D is not available"
+   # exit 1
+#fi
 
 
 echo "script is executed at $TIMESTAMP" &>>$LOG_FILE_NAME
