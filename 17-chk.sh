@@ -27,7 +27,7 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE :: sh 17-chk.sh <S_D> <D_D> <DAYS>"
-    exit 1
+    
 }
 
 if [ $# -lt 2 ]
