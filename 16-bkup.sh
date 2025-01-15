@@ -31,8 +31,8 @@ USAGE(){
 }
 
 mkdir -p /home/ec2-user/ss-logs/
-#mkdir -p /home/ec2-user/app
-#mkdir -p /home/ec2-user/arch
+mkdir -p /home/ec2-user/app
+mkdir -p /home/ec2-user/arch
 
 if [ $# -lt 2 ]
 then
