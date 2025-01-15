@@ -34,3 +34,15 @@ if [ $# -lt 2 ]
 then
     USAGE
 fi
+
+if [ ! -d "S_D" ]
+then
+    echo -e "$S_D is not available"
+    exit 1
+fi
+
+if [ ! -d "D_D" ]
+then
+    echo -e "$D_D is not available"
+    exit 1
+fi
