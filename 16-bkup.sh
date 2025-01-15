@@ -14,7 +14,7 @@ Logs_file=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$Logs_folder/$Logs_file-$TIMESTAMP.log"
 
-mkdir -p /home/ec2-user/ss-logs
+
 
 VALIDATE(){
        if [ $1 -ne 0 ]
@@ -28,7 +28,10 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE :: sh 16-bkup.sh <S_D> <D_D> <DAYS>"
+
 }
+
+mkdir -p /home/ec2-user/ss-logs
 
 if [ $# -lt 2 ]
 then
