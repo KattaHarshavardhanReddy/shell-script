@@ -40,7 +40,7 @@ fi
 if [ ! -d "S_D" ]
 then
     echo -e "$S_D is not available"
-    exit 1
+    #exit 1
 fi
 
 if [ ! -d "D_D" ]
