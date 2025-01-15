@@ -27,7 +27,7 @@ VALIDATE(){
 
 USAGE(){
     echo -e "$R USAGE :: sh 16-bkup.sh <S_D> <D_D> <DAYS>"
-
+    exit 1
 }
 
 mkdir -p /home/ec2-user/ss-logs
